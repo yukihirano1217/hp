@@ -14,20 +14,20 @@ export const TopPage = () => {
                 <GazouImage />
             </Box>
             <Grid container justifyContent="center" spacing={10} sx={{ marginTop: '100px' }}>
-                <Grid item xs={12} md={4}>
+                {/* <Grid item xs={12} md={4}> */}
                     <BodyCard />
-                </Grid>
-                <Grid item xs={12} md={4}>
+                {/* </Grid> */}
+                {/* <Grid item xs={12} md={4}> */}
                     <BodyCard />
-                </Grid>
+                {/* </Grid> */}
             </Grid>
             <Grid container justifyContent="center" spacing={10} sx={{ marginY: '100px' }}>
-                <Grid item xs={12} md={4}>
+                {/* <Grid item xs={12} md={4}> */}
                     <BodyCard />
-                </Grid>
-                <Grid item xs={12} md={4}>
+                {/* </Grid> */}
+                {/* <Grid item xs={12} md={4}> */}
                     <BodyCard />
-                </Grid>
+                {/* </Grid> */}
             </Grid>
             <Contact />
             <Footer />
