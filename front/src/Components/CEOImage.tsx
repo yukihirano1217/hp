@@ -10,8 +10,8 @@ export const CEOImage = () => {
                 display: 'flex',
                 alignItems: 'center',
                 objectFit: 'contain',
-                height: '500px',
-                width: '500px',
+                height: '300px',
+                width: '300px',
                 zIndex: 1
             }}
         />

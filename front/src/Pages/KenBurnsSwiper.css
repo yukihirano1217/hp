@@ -1,0 +1,61 @@
+/* Swiper本体とスライドを枠の高さに合わせる */
+.kb-container .swiper,
+.kb-container .swiper-wrapper,
+.kb-container .swiper-slide {
+  height: 100%;
+}
+
+/* スライド可視領域（枠） */
+.kb-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ステージ（拡大対象） */
+.kb-stage {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+  transition: transform 0.1s; /* デバッグ用 */
+}
+
+/* 画像は枠いっぱいにフィット */
+.kb-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ken Burns（中央ズーム） */
+@keyframes kenburns {
+  0% { 
+    transform: scale(1); 
+  }
+  100% { 
+    transform: scale(1.12); 
+  }
+}
+
+/* 非アクティブスライドはスケールをリセット */
+.kb-container .swiper-slide .kb-stage {
+  transform: scale(1);
+  animation: none;
+}
+
+/* アクティブスライドだけズーム */
+.kb-container .swiper-slide-active .kb-stage {
+  animation: kenburns 8000ms ease-in-out forwards;
+}
+
+/* 動きを減らす設定に配慮 */
+@media (prefers-reduced-motion: reduce) {
+  .kb-container .swiper-slide-active .kb-stage { 
+    animation: none; 
+  }
+}

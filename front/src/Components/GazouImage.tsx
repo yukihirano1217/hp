@@ -10,8 +10,8 @@ export const GazouImage = () => {
                 display: 'flex',
                 alignItems: 'center',
                 objectFit: 'contain',
-                height: '30%',
-                width: '100%',
+                height: '1100px',
+                width: '1890px',
                 zIndex: 1
             }}
         />

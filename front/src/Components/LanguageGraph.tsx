@@ -9,9 +9,9 @@ export const LanguageGraph = () => {
             sx={{
                 display: 'flex',
                 alignItems: 'center',
-                objectFit: 'contain',
-                height: '500px',
-                width: '500px',
+                objectFit: 'fill',
+                height: '800px',
+                width: '100%',
                 zIndex: 1
             }} />
     )
