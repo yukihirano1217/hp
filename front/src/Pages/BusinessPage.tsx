@@ -17,6 +17,11 @@ import Kuchikomi5 from '../assets/kuchikomi5.png'
 import Kuchikomi6 from '../assets/kuchikomi6.png'
 import CloseIcon from '@mui/icons-material/Close'
 import { ImportantDevices } from "@mui/icons-material";
+import { BusinessCard2 } from "../Components/BusinessCard2";
+import Device1 from '../assets/device1.png'
+import { BusinessCard3 } from "../Components/BusinessCard3";
+import { BusinessCard5 } from "../Components/BusinessCard5";
+import { BusinessCard4 } from "../Components/BusinessCard4";
 
 export const BusinessPage = () => {
 
@@ -163,10 +168,10 @@ export const BusinessPage = () => {
             <Typography sx={{ color: 'black', marginLeft: '100px', fontSize: '2rem', my: '5%' }}>開発 運用の実績</Typography>
             <Box sx={{ justifyContent: 'center', display: 'flex', marginTop: '50px', marginBottom: '50px' }}>
 
-                <BusinessCard onClick={handleModal} />
-                <BusinessCard />
-                <BusinessCard />
-                <BusinessCard />
+                <BusinessCard2 onClick={handleModal} />
+                <BusinessCard3 />
+                <BusinessCard5 />
+                <BusinessCard4 />
             </Box>
             <Box sx={{ justifyContent: 'center', display: 'flex', marginTop: '50px', marginBottom: '50px' }}>
 
@@ -370,7 +375,18 @@ export const BusinessPage = () => {
                     </IconButton>
                     <Box sx={{ display: 'flex', justifyContent: 'left', }}>
                         <Typography variant="h5" fontWeight={'bold'} sx={{ alignContent: 'center' }}>ソフトライセンス管理システム</Typography>
-                        <ImportantDevices sx={{ fontSize: 40, color: '#F28B2B', ml: 2 }} />
+                        <Box
+                            component='img'
+                            src={Device1}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                objectFit: 'fill',
+                                height: '40px',
+                                width: '40px',
+                                zIndex: 1,
+                                ml:2
+                            }} />
                     </Box>
                     <Typography variant="body2" sx={{ alignContent: 'center', pt: 2 }}>
                         ・社内で利用されている各PCにインストールされているソフトウェアが<br />　各所属部門が保有するライセンスと照合し、ライセンスの不足や<br />　禁止ソフトの利用等をチェックするシステム
