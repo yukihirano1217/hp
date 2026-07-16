@@ -10,9 +10,11 @@ export const LanguageGraph = () => {
                 display: 'flex',
                 alignItems: 'center',
                 objectFit: 'fill',
-                height: '800px',
-                width: '100%',
-                zIndex: 1
+                height: '400px',
+                width: '60%',
+                zIndex: 1,
+                pt:'50px',
+                pl: '20px'
             }} />
     )
 }

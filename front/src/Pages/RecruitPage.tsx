@@ -24,6 +24,7 @@ import { styled } from "@mui/system";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import React from "react";
 import { headerHeight } from "./TopPage";
+import CloseIcon from '@mui/icons-material/Close'
 
 type RecruitCard = {
     title: string;
@@ -45,53 +46,53 @@ export const RecruitPage = () => {
         {
             title: '落ち着いた\nコミュニケーション',
             image: Relax,
-            text: ""
+            text: "穏やかな方が多く、声を荒げている社員は見たことがありません。\n相手を思いやったコミュニケーションが社内に根付いています。"
         },
         {
             title: 'スキルアップ',
             image: Skillup,
-            text: ""
+            text: "希望や適性に応じて多種多様なプロジェクトに参画可能です。\n〇個以上の言語を操る社員も。"
         },
 
         {
             title: '大手案件',
             image: Ote,
-            text: ""
+            text: "クライアントのほとんどは大手企業。\nお客様の近くで、お客様と直接仕様検討する案件も多数。\n円滑なコミュニケーションのもと依頼を頂けるので「やらされ感」がありません。"
         },
         {
             title: '公平な\n評価制度',
             image: Hyouka,
-            text: ""
+            text: "年に一度、自身の業務について定量的成果と定性的成果を振り返り、上長や社長との面談で報告します。\n会社への貢献度によって賞与額や昇給幅が大きくなるのでモチベーションになります。"
         },
         {
             title: '大手並みの\n福利厚生',
             image: Fukurikosei,
-            text: ""
+            text: "年間休日125日以上、様々なケースに寄り添った休暇制度、家族手当や住宅手当などの各種手当、フレックスタイム制度などなど。（詳細は下記へ）\n仕事に集中できる環境と、オフの時間を満喫できる余裕があります。"
         },
         {
             title: 'リモートあり',
             image: Remote,
-            text: ""
+            text: "ニアショア案件を中心にリモートワークも選択できます。\n家庭や自身のライフスタイルに合わせた働き方ができます。"
         },
         {
             title: '堅実経営',
             image: Kenjitsu,
-            text: ""
+            text: "1989年の設立以来、〇年連続無借金経営を達成しています。\n〇年連続売上高を拡大しており、安心して働き続けられる会社です。"
         },
         {
             title: 'チームで\nプロジェクト',
             image: Team,
-            text: ""
+            text: "開発は2～5名のチーム制。\n助け合いながら、高め合いながら仕事に臨めます。"
         },
         {
             title: '福岡で働ける',
             image: Fukuoka,
-            text: ""
+            text: "地元・福岡で働きたい方、福岡に移住したい方、大歓迎です。\n引越支援制度も。（詳細は下記へ）"
         },
         {
             title: '上流の仕事も\nできる',
             image: Joryu,
-            text: ""
+            text: "プログラマーとして経験を積めば、要件定義や設計業務も担当できます。\n着実なスキルアップができる環境が整っています。"
         },
         // {
         //     title: '博多駅より\n徒歩3分',
@@ -161,6 +162,29 @@ export const RecruitPage = () => {
                 display: 'flex',
                 gap: 5,
             }}>
+                <IconButton
+                    aria-label="close"
+                    onClick={() => setRecruitModalOpen(false)}
+                    size='small'
+                    sx={{
+                        position: 'absolute',
+                        right: 280,
+                        top: 160,
+                        color: (theme) => theme.palette.grey[500],
+                        border: '2px solid', // 枠線をつける
+                        borderColor: (theme) => theme.palette.grey[400],
+                    }}
+                >
+                    <CloseIcon sx={{
+                        fontSize: '12px',
+                        stroke: "currentColor", // 親のcolor（グレー）を引き継ぐ
+                        strokeWidth: 5,
+                        transition: 'transform 0.2s',
+                        '&:hover': {
+                            transform: 'scale(1.4)'
+                        }
+                    }} />
+                </IconButton>
                 <img
                     src={image}
                     alt=""
@@ -237,6 +261,10 @@ export const RecruitPage = () => {
                         color: '#fff',
                         width: 32,
                         height: 32,
+                        transition: 'transform 0.2s',
+                        '&:hover': {
+                            transform: 'scale(1.4)'
+                        }
                     }}
                     size="small"
                     onClick={() => handleModalOpen(index)}
@@ -415,7 +443,7 @@ export const RecruitPage = () => {
                         variant="h4"
                         sx={{
                             position: 'absolute',
-                            top: '230px',
+                            top: '200px',
                             left: '100px',
                             // transform: 'translate(-50%, -50%)',
                             color: 'white',
@@ -427,7 +455,7 @@ export const RecruitPage = () => {
                         variant="body1"
                         sx={{
                             position: 'absolute',
-                            top: '330px',
+                            top: '270px',
                             left: '160px',
                             // transform: 'translate(-50%, -50%)',
                             color: 'white',
@@ -853,6 +881,146 @@ export const RecruitPage = () => {
                                 // pt: 4, // 上のラベルとかぶらないように少し下げる
                             }}
                         >
+                            <Typography sx={{ mt: 2 }} fontSize="18px">土日の面接は可能ですか？</Typography>
+                            <Typography color='#F28B2B' sx={{ mt: 2, fontSize: '40px' }}>→</Typography>
+                            <Typography sx={{ mt: 2 }} fontSize="18px">
+                                基本的には平日の実施となりますが、ご相談頂ければ柔軟に対応致します。
+                            </Typography>
+                        </Box>
+                    </Box>
+                    <Box
+                        sx={{
+                            position: "relative",
+                            width: 1200,
+                            height: 210,
+                            // border: "1.5px solid #1F2A44",
+                            borderRadius: "36px",
+                            bgcolor: "#F6E0D4",
+                            overflow: "visible",
+                            mb: 10
+                        }}
+                    >
+                        {/* X */}
+                        <Typography
+                            sx={{
+                                position: "absolute",
+                                top: -35,
+                                left: 16,
+                                fontSize: 64,
+                                fontWeight: 800,
+                                lineHeight: 1,
+                                color: "transparent",
+                                WebkitTextStroke: "3px #F28B2B",
+                                textShadow: "0 1px 0 rgba(0,0,0,0.05)",
+                                userSelect: "none",
+                                pointerEvents: "none",
+                            }}
+                        >
+                            {"Q"}
+                        </Typography>
+
+                        {/* Y */}
+                        <Typography
+                            sx={{
+                                position: "absolute",
+                                top: -35,
+                                left: "50%",
+                                transform: "translateX(-50%)",
+                                fontSize: 72,
+                                fontWeight: 800,
+                                lineHeight: 1,
+                                color: "transparent",
+                                WebkitTextStroke: "3px #F28B2B",
+                                textShadow: "0 1px 0 rgba(0,0,0,0.05)",
+                                userSelect: "none",
+                                pointerEvents: "none",
+                            }}
+                        >
+                            {"A"}
+                        </Typography>
+
+                        {/* 中身 */}
+                        <Box
+                            sx={{
+                                height: "100%",
+                                px: 6,
+                                display: "grid",
+                                gridTemplateColumns: "3fr 1fr 4fr",
+                                alignItems: "center",
+                                // pt: 4, // 上のラベルとかぶらないように少し下げる
+                            }}
+                        >
+                            <Typography sx={{ mt: 2 }} fontSize="18px">合否の連絡はどのようになされますか？</Typography>
+                            <Typography color='#F28B2B' sx={{ mt: 2, fontSize: '40px' }}>→</Typography>
+                            <Typography sx={{ mt: 2 }} fontSize="18px">
+                                お電話またはメールにてご連絡致します。<br />
+                                ご希望がございましたら事前にご相談ください。
+                            </Typography>
+                        </Box>
+                    </Box>
+
+                    <Box
+                        sx={{
+                            position: "relative",
+                            width: 1200,
+                            height: 210,
+                            // border: "1.5px solid #1F2A44",
+                            borderRadius: "36px",
+                            bgcolor: "#F6E0D4",
+                            overflow: "visible",
+                            mb: 10
+                        }}
+                    >
+                        {/* X */}
+                        <Typography
+                            sx={{
+                                position: "absolute",
+                                top: -35,
+                                left: 16,
+                                fontSize: 64,
+                                fontWeight: 800,
+                                lineHeight: 1,
+                                color: "transparent",
+                                WebkitTextStroke: "3px #F28B2B",
+                                textShadow: "0 1px 0 rgba(0,0,0,0.05)",
+                                userSelect: "none",
+                                pointerEvents: "none",
+                            }}
+                        >
+                            {"Q"}
+                        </Typography>
+
+                        {/* Y */}
+                        <Typography
+                            sx={{
+                                position: "absolute",
+                                top: -35,
+                                left: "50%",
+                                transform: "translateX(-50%)",
+                                fontSize: 72,
+                                fontWeight: 800,
+                                lineHeight: 1,
+                                color: "transparent",
+                                WebkitTextStroke: "3px #F28B2B",
+                                textShadow: "0 1px 0 rgba(0,0,0,0.05)",
+                                userSelect: "none",
+                                pointerEvents: "none",
+                            }}
+                        >
+                            {"A"}
+                        </Typography>
+
+                        {/* 中身 */}
+                        <Box
+                            sx={{
+                                height: "100%",
+                                px: 6,
+                                display: "grid",
+                                gridTemplateColumns: "3fr 1fr 4fr",
+                                alignItems: "center",
+                                // pt: 4, // 上のラベルとかぶらないように少し下げる
+                            }}
+                        >
                             <Typography sx={{ mt: 2 }} fontSize="18px">面接はどのような雰囲気ですか？</Typography>
                             <Typography color='#F28B2B' sx={{ mt: 2, fontSize: '40px' }}>→</Typography>
                             <Typography sx={{ mt: 2 }} fontSize="18px">
@@ -957,7 +1125,7 @@ export const RecruitPage = () => {
                 <FlowItem label="適性検査">
                     <Typography fontSize="18px">
                         ・簡単な筆記試験を受けて頂きます。<br />
-                        （所要時間：60分程度）
+                        （所要時間：30分程度）
                     </Typography>
                 </FlowItem>
 

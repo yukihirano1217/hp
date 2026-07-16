@@ -35,7 +35,7 @@ export const CEOPage = () => {
                         variant="h4"
                         sx={{
                             position: 'absolute',
-                            top: '230px',
+                            top: '200px',
                             left: '100px',
                             // transform: 'translate(-50%, -50%)',
                             color: 'white',
@@ -47,7 +47,7 @@ export const CEOPage = () => {
                         variant="body1"
                         sx={{
                             position: 'absolute',
-                            top: '330px',
+                            top: '270px',
                             left: '160px',
                             // transform: 'translate(-50%, -50%)',
                             color: 'white',
@@ -84,7 +84,7 @@ export const CEOPage = () => {
                         color="#F28B2B"
                         sx={{ mx: '150px', mb: '50px', textAlign: 'justify' }}
                     >
-                        お客様との信頼関係
+                        お客様との信頼関係　-築き上げた実績と更なる深化
                     </Typography>
                     <Typography
                         variant="subtitle1"

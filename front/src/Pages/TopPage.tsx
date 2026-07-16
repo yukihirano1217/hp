@@ -84,7 +84,7 @@ export const TopPage = () => {
                     sx={{
                         position: 'relative',
                         width: '100%',
-                        height: '100%',
+                        height: '65%',
                         overflow: 'hidden',
                         backgroundColor: '#000',
                     }}
@@ -168,7 +168,7 @@ export const TopPage = () => {
                     onSlide={handleSlide}
                 />
             </Box>
-            <Box sx={{ flexGrow: 1, p: 4, mx: 20, mt: 40, }}>
+            <Box sx={{ flexGrow: 1, p: 4, mx: 20, mt: 0, }}>
                 <Grid
                     container
                     spacing={4}
@@ -218,7 +218,7 @@ export const TopPage = () => {
                         </Typography>
 
                         <Typography variant='h6' sx={{ lineHeight: 1.8, ml: 12 }}>
-                            私たちシステムプロステージのミッションは、
+                            私達システムプロステージのミッションは、
                         </Typography>
                         <Typography variant='h6' sx={{ lineHeight: 1.8, ml: 12 }}>
                             これからの知識社会にむけて、お客様の創造的活動を支えるコンピュータシステムと

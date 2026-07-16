@@ -35,7 +35,7 @@ export const IntroductionPage = () => {
                         variant="h4"
                         sx={{
                             position: 'absolute',
-                            top: '230px',
+                            top: '200px',
                             left: '100px',
                             // transform: 'translate(-50%, -50%)',
                             color: 'white',
@@ -47,7 +47,7 @@ export const IntroductionPage = () => {
                         variant="body1"
                         sx={{
                             position: 'absolute',
-                            top: '330px',
+                            top: '270px',
                             left: '160px',
                             // transform: 'translate(-50%, -50%)',
                             color: 'white',

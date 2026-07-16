@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import {ImportantDevices} from '@mui/icons-material';
+import { ImportantDevices } from '@mui/icons-material';
 
 type Props = {
     onClick?: () => void;
 }
 
-export const BusinessCard = (props:Props) => {
+export const BusinessCard = (props: Props) => {
     return (
         <div style={{
             // backgroundColor: 'black',
@@ -15,10 +15,17 @@ export const BusinessCard = (props:Props) => {
             // margin: '50px',
             textAlign: 'center'
         }}>
-            <Box sx={{ display: 'flex', justifyContent: 'center',  height: '200px', width: '300px', opacity: 0.8, position: 'relative' }} onClick={props.onClick}>
-                <ImportantDevices sx={{ fontSize: 100, color: 'green' }} />
+            <Box sx={{
+                display: 'flex', justifyContent: 'center', height: '200px', width: '300px', opacity: 0.8,
+                position: 'relative',
+                transition: 'transform 0.2s',
+                '&:hover': {
+                    transform: 'scale(1.1)'
+                }
+            }} onClick={props.onClick}>
+                <ImportantDevices sx={{ fontSize: 100, color: 'orange' }} />
                 <Box sx={{ position: 'absolute', zIndex: 1, top: '70%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-                    <Typography color="black" variant="h6">物品管理システム</Typography>
+                    <Typography color="black" variant="h6">ソフトライセンス管理システム</Typography>
                 </Box>
             </Box>
 
